@@ -6,11 +6,19 @@ const {
   onInputChange,
   onCheckboxChange,
   onSubmit,
+  errors
 } = props
 
 return(
   <form className='form-class'>
     <h2>New User Form</h2>
+    <div className='errors'>
+      {errors.username}
+      {errors.email}
+      {errors.password}
+    </div>
+
+
       <label>Username:&nbsp;
       <input
         value={values.username}
